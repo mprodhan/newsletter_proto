@@ -1,0 +1,8 @@
+<h1>Hello Wayne</h1>
+<p>Please fill out this form with your name to author an article</p>
+
+<form action="/authoradd/" method="post">
+    {% csrf_token %}
+    {{form.as_p }}
+    <input type="submit" value="Submit">
+</form>

@@ -1,5 +1,6 @@
 from django.shortcuts import render, reverse, HttpResponseRedirect
 
+
 from news_app.models import Author, News
 from news_app.forms import NewsAddForm, AuthorAddForm
 
@@ -44,7 +45,7 @@ def newsadd(request):
 #     return render(request, html, context)
 
 def authoradd(request):
-    html = "authoradd.html"
+    html = "generic_form.html"
     if request.method == "POST":
         form = AuthorAddForm(request.POST)
         form.save()

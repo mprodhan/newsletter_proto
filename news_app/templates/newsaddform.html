@@ -1,8 +1,7 @@
-<h1>Hello Wayne</h1>
+{% extends "generic_form.html" %}
 <p>Please fill out this form</p>
 
-<form action="/newsadd/" method="post">
-    {% csrf_token %}
-    {{form.as_p }}
-    <input type="submit" value="Submit">
-</form>
+{% block form %}
+
+{% endblock %}
+

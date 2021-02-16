@@ -1,5 +1,6 @@
-<h1>Hello Wayne</h1>
+{% extends "base.html" %}
 
+{% block body %}
 <h1>Articles written by {{author}}</h1>
 {% for article in articles %}
 
@@ -8,3 +9,5 @@
     <p>{{article.date}}</p>
 
 {% endfor %}
+
+{% endblock %}

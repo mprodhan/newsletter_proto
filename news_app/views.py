@@ -59,16 +59,13 @@ def authoradd(request):
 ''' Anytime we are looking at detail for lookup, then we need 
 an id in addition to request as parameters. '''
 def author_detail(request, id):
+    html = "author.html"
     author = Author.objects.get(id=id)
     # the author=author means that for author(left), is assigned
     # to author variable listed above.
     articles = News.objects.filter(author=author)
+    # body = News.objects.filter(author=author)
     context = {'author': author, 'articles': articles}
-    return render(request, context)
+    return render(request, html, context)
     # Needs an html page to add between request and context
 
-def article_detail(request, id):
-    post = News.objects.get(id=id)
-    context = {'post': post}
-    return render(request, context)
-    # Needs an html page

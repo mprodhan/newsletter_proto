@@ -1,0 +1,10 @@
+<h1>Hello Wayne</h1>
+
+<h1>Articles written by {{author}}</h1>
+{% for article in articles %}
+
+    <h3>{{article.id}}) {{article}}</h3>
+    <p>{{article.body}}</p>
+    <p>{{article.date}}</p>
+
+{% endfor %}

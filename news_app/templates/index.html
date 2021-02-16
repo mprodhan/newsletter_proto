@@ -1,1 +1,11 @@
-<h1>Hello Wayne</h1>
+<h1>Hello Enterprise</h1>
+
+{% for dat in data %}
+
+    <h1>{{dat.title}}</h1>
+    <p>by {{dat.author}}</p>
+    <p>{{dat.body}}</p>
+    {{dat.date}}
+    
+
+{% endfor %}
